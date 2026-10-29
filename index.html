@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espectroscopía UV-Vis · Aplicaciones farmacéuticas</title>
+<meta name="description" content="Seminario de análisis instrumental farmacéutico: aplicaciones de la espectroscopía UV-Vis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress"><span id="bar"></span></div>
+
+<main class="deck" id="deck">
+
+  <!-- ============ PORTADA ============ -->
+  <section class="slide title-slide" data-accent="0">
+    <div class="t-grid">
+      <div class="t-left">
+        <p class="kicker">Seminario · Análisis Instrumental Farmacéutico</p>
+        <h1>Espectroscopía <span class="grad">UV-Vis</span></h1>
+        <p class="sub">Cinco aplicaciones en la investigación y la industria farmacéutica</p>
+        <div class="beer">
+          <div class="beer-eq">A = ε · b · c</div>
+          <div class="beer-legend">
+            <span><b>A</b> absorbancia = log(I₀/I)</span>
+            <span><b>ε</b> absortividad molar</span>
+            <span><b>b</b> paso óptico (cm)</span>
+            <span><b>c</b> concentración</span>
+          </div>
+        </div>
+        <ol class="toc">
+          <li><button data-go="1"><i>01</i>Carga y liberación de fármacos</button></li>
+          <li><button data-go="2"><i>02</i>Propiedades antioxidantes</button></li>
+          <li><button data-go="3"><i>03</i>Actividad y cinética enzimática</button></li>
+          <li><button data-go="4"><i>04</i>Detección y biosensores</button></li>
+          <li><button data-go="5"><i>05</i>Reducción catalítica y síntesis</button></li>
+        </ol>
+      </div>
+      <div class="t-right">
+        <figure class="card"><svg id="f0a" role="img" aria-label="Esquema de un espectrofotómetro"></svg><figcaption><b>Espectrofotómetro:</b> fuente → monocromador → muestra → detector</figcaption></figure>
+        <figure class="card"><svg id="f0b" role="img" aria-label="Región espectral UV-Vis"></svg><figcaption><b>Región de trabajo 190–800 nm</b> · longitudes de onda usadas en cada aplicación</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1. CARGA Y LIBERACIÓN ============ -->
+  <section class="slide" data-accent="1">
+    <header class="s-head">
+      <span class="s-num">01</span>
+      <div><p class="kicker">Nanomedicina</p><h2>Carga y liberación de fármacos</h2></div>
+      <span class="lambda">λ<sub>max</sub> del fármaco</span>
+    </header>
+    <div class="s-body">
+      <aside class="s-text">
+        <ol class="steps">
+          <li><b>Separar</b> el vehículo (liposoma o nanopartícula) del fármaco no encapsulado.</li>
+          <li><b>Medir</b> la absorbancia del fármaco libre a su λ<sub>max</sub> e interpolar en la curva de calibración.</li>
+          <li><b>Monitorear</b> el aumento de absorbancia en el medio con el tiempo → perfil y velocidad de liberación.</li>
+        </ol>
+        <div class="formula">
+          <span>EE (%) =</span>
+          <span class="frac"><span>Fármaco total − Fármaco libre</span><span>Fármaco total</span></span>
+          <span>× 100</span>
+        </div>
+        <ul class="chips"><li>Liposomas</li><li>Nanopartículas</li><li>Eficiencia de encapsulación</li><li>Liberación sostenida</li></ul>
+      </aside>
+      <div class="s-figs L1">
+        <figure class="card"><svg id="f1a"></svg><figcaption><b>Encapsulación:</b> el sobrenadante contiene sólo el fármaco libre</figcaption></figure>
+        <figure class="card"><svg id="f1b"></svg><figcaption><b>Curva de calibración</b> (Beer-Lambert) → EE = 82 %</figcaption></figure>
+        <figure class="card"><svg id="f1c"></svg><figcaption><b>Perfil de liberación in vitro:</b> el fármaco libre difunde en minutos; la nanoformulación lo libera de forma sostenida y responde al pH ácido tumoral</figcaption></figure>
+      </div>
+    </div>
+    <div class="notes">En nanomedicina, esta técnica nos permite determinar cuánta cantidad de principio activo logra atrapar un vehículo como una nanopartícula o liposoma. Al medir la absorbancia del fármaco libre a su longitud de onda característica, calculamos la eficiencia de encapsulación. Posteriormente, al monitorear el aumento gradual de absorbancia en el tiempo, evaluamos cómo y a qué velocidad se libera el medicamento en el organismo.</div>
+  </section>
+
+  <!-- ============ 2. ANTIOXIDANTES ============ -->
+  <section class="slide" data-accent="2">
+    <header class="s-head">
+      <span class="s-num">02</span>
+      <div><p class="kicker">Estrés oxidativo</p><h2>Propiedades antioxidantes</h2></div>
+      <span class="lambda">517 nm</span>
+    </header>
+    <div class="s-body">
+      <aside class="s-text">
+        <ol class="steps">
+          <li>El radical <b>DPPH•</b> es violeta intenso, con máximo de absorción a <b>517 nm</b>.</li>
+          <li>Al reaccionar con un antioxidante se reduce a <b>DPPH–H</b> (amarillo): la absorbancia disminuye.</li>
+          <li>Graficar % de inhibición vs concentración da la <b>IC<sub>50</sub></b>: a menor IC<sub>50</sub>, mejor antioxidante.</li>
+        </ol>
+        <div class="formula">
+          <span>% Inhibición =</span>
+          <span class="frac"><span>A<sub>control</sub> − A<sub>muestra</sub></span><span>A<sub>control</sub></span></span>
+          <span>× 100</span>
+        </div>
+        <ul class="chips"><li>Ensayo DPPH</li><li>Colorimetría</li><li>IC<sub>50</sub></li><li>Envejecimiento celular</li></ul>
+      </aside>
+      <div class="s-figs L1">
+        <figure class="card"><svg id="f2a"></svg><figcaption><b>Decoloración del DPPH•:</b> la banda a 517 nm cae al aumentar el antioxidante</figcaption></figure>
+        <figure class="card"><svg id="f2b"></svg><figcaption><b>Curvas dosis-respuesta</b> → selección del mejor compuesto</figcaption></figure>
+        <figure class="card"><svg id="f2c"></svg><figcaption><b>Cambio de color visible:</b> violeta → amarillo pálido con concentraciones crecientes del extracto</figcaption></figure>
+      </div>
+    </div>
+    <div class="notes">Para desarrollar tratamientos contra el estrés oxidativo y el envejecimiento celular, utilizamos ensayos colorimétricos como el DPPH. El radical DPPH es de color violeta e intenso a 517 nanómetros, pero al reaccionar con un antioxidante pierde su color. Medir esa disminución de absorbancia nos permite calcular el valor de IC50 y seleccionar los mejores compuestos.</div>
+  </section>
+
+  <!-- ============ 3. CINÉTICA ENZIMÁTICA ============ -->
+  <section class="slide" data-accent="3">
+    <header class="s-head">
+      <span class="s-num">03</span>
+      <div><p class="kicker">Diseño de fármacos</p><h2>Actividad y cinética enzimática</h2></div>
+      <span class="lambda">340 nm · NADH</span>
+    </header>
+    <div class="s-body">
+      <aside class="s-text">
+        <ol class="steps">
+          <li>El <b>NADH</b> absorbe a <b>340 nm</b>; el NAD⁺ no. Su consumo se sigue en tiempo real.</li>
+          <li>La pendiente <b>ΔA₃₄₀/Δt</b> da la velocidad inicial v₀ de la reacción.</li>
+          <li>Variando [S] se obtienen <b>V<sub>máx</sub></b> y <b>K<sub>m</sub></b>; con un inhibidor se identifica su tipo y potencia.</li>
+        </ol>
+        <div class="formula">
+          <span>v₀ =</span>
+          <span class="frac"><span>ΔA₃₄₀ / Δt</span><span>ε · b</span></span>
+          <span class="small">ε<sub>NADH</sub> = 6220 M⁻¹·cm⁻¹</span>
+        </div>
+        <div class="formula">
+          <span>v =</span>
+          <span class="frac"><span>V<sub>máx</sub> · [S]</span><span>K<sub>m</sub> + [S]</span></span>
+        </div>
+        <ul class="chips"><li>Michaelis-Menten</li><li>Lineweaver-Burk</li><li>Inhibidores</li></ul>
+      </aside>
+      <div class="s-figs L2">
+        <figure class="card"><svg id="f3a"></svg><figcaption><b>Ensayo cinético:</b> caída de A₃₄₀ por oxidación del NADH</figcaption></figure>
+        <figure class="card"><svg id="f3b"></svg><figcaption><b>Michaelis-Menten:</b> el inhibidor aumenta la K<sub>m</sub> aparente</figcaption></figure>
+        <figure class="card"><svg id="f3c"></svg><figcaption><b>NADH vs NAD⁺:</b> la banda a 340 nm es exclusiva del NADH</figcaption></figure>
+        <figure class="card"><svg id="f3d"></svg><figcaption><b>Lineweaver-Burk:</b> misma 1/V<sub>máx</sub> → inhibición competitiva</figcaption></figure>
+      </div>
+    </div>
+    <div class="notes">La mayoría de los fármacos funcionan bloqueando enzimas específicas. Al medir el cambio de absorbancia de cofactores como el NADH a 340 nanómetros, evaluamos la velocidad de una reacción enzimática en tiempo real. Esto nos permite calcular parámetros como Vmáx y Km, e identificar si una nueva molécula actúa como un inhibidor eficaz para el diseño de nuevos medicamentos.</div>
+  </section>
+
+  <!-- ============ 4. BIOSENSORES ============ -->
+  <section class="slide" data-accent="4">
+    <header class="s-head">
+      <span class="s-num">04</span>
+      <div><p class="kicker">Control de calidad y diagnóstico</p><h2>Detección y biosensores</h2></div>
+      <span class="lambda">SPR ≈ 520 nm</span>
+    </header>
+    <div class="s-body">
+      <aside class="s-text">
+        <ol class="steps">
+          <li>Las nanopartículas de Au/Ag presentan una banda intensa de <b>Resonancia de Plasmón de Superficie</b> (SPR).</li>
+          <li>Cuando el analito o biomarcador se une a la superficie, cambia el índice de refracción local → <b>desplazamiento del pico</b> (corrimiento al rojo).</li>
+          <li>La magnitud de <b>Δλ</b> se relaciona con la concentración → detección de trazas con altísima sensibilidad.</li>
+        </ol>
+        <div class="formula">
+          <span>Δλ = λ<sub>SPR, muestra</sub> − λ<sub>SPR, AuNP</sub></span>
+        </div>
+        <ul class="chips"><li>Nanopartículas de oro</li><li>Biomarcadores</li><li>Contaminantes traza</li><li>ng/mL</li></ul>
+      </aside>
+      <div class="s-figs L3">
+        <figure class="card"><svg id="f4a"></svg><figcaption><b>Principio del biosensor plasmónico</b></figcaption></figure>
+        <figure class="card"><svg id="f4b"></svg><figcaption><b>Espectro SPR:</b> desplazamiento del pico al unirse el analito</figcaption></figure>
+        <figure class="card"><svg id="f4c"></svg><figcaption><b>Curva de respuesta:</b> Δλ vs concentración del biomarcador</figcaption></figure>
+      </div>
+    </div>
+    <div class="notes">En control de calidad y diagnóstico clínico, aprovechamos la Resonancia de Plasmón de Superficie de las nanopartículas metálicas. Cuando un analito o biomarcador se une a la superficie de la nanopartícula, modifica su entorno y genera un desplazamiento en el pico del espectro UV-Vis. Esto permite detectar trazas de contaminantes o enfermedades con altísima sensibilidad.</div>
+  </section>
+
+  <!-- ============ 5. REDUCCIÓN CATALÍTICA ============ -->
+  <section class="slide" data-accent="5">
+    <header class="s-head">
+      <span class="s-num">05</span>
+      <div><p class="kicker">Química farmacéutica industrial</p><h2>Reducción catalítica y síntesis</h2></div>
+      <span class="lambda">400 → 300 nm</span>
+    </header>
+    <div class="s-body">
+      <aside class="s-text">
+        <ol class="steps">
+          <li>Se registra el <b>espectro a intervalos regulares</b> durante la síntesis.</li>
+          <li>Desaparece el pico del reactivo (<b>4-nitrofenolato, 400 nm</b>) y surge el del producto (<b>4-aminofenol, 300 nm</b>).</li>
+          <li>Los <b>puntos isosbésticos</b> indican conversión limpia; la pendiente de ln(A<sub>t</sub>/A₀) da la constante de velocidad.</li>
+        </ol>
+        <div class="formula">
+          <span>ln(A<sub>t</sub> / A₀) = −k<sub>app</sub> · t</span>
+        </div>
+        <p class="aside-note">El 4-aminofenol es el precursor directo del <b>paracetamol</b>: optimizar esta reducción mejora el rendimiento y la pureza del principio activo.</p>
+        <ul class="chips"><li>Monitoreo en línea</li><li>Rendimiento</li><li>Pureza</li></ul>
+      </aside>
+      <div class="s-figs L1">
+        <figure class="card"><svg id="f5a"></svg><figcaption><b>Evolución espectral</b> cada 2 min: reactivo ↓, producto ↑</figcaption></figure>
+        <figure class="card"><svg id="f5b"></svg><figcaption><b>Cinética de pseudo-primer orden</b> a 400 nm</figcaption></figure>
+        <figure class="card"><svg id="f5c"></svg><figcaption><b>Ruta modelo:</b> reducción catalítica del 4-nitrofenol y acetilación a paracetamol</figcaption></figure>
+      </div>
+    </div>
+    <div class="notes">En la química farmacéutica industrial, se utiliza para controlar la síntesis de principios activos en tiempo real. Al registrar el espectro a intervalos regulares, observamos cómo desaparece el pico de los reactivos y surge el del producto deseado. Esto permite optimizar las reacciones químicas, mejorar los rendimientos y garantizar la pureza del fármaco producido.</div>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="slide end-slide" data-accent="0">
+    <header class="s-head">
+      <div><p class="kicker">Resumen</p><h2>Una técnica, cinco aplicaciones</h2></div>
+    </header>
+    <div class="summary">
+      <button class="sum" data-go="1" style="--c:#5eead4"><i>01</i><b>Carga y liberación</b><span class="nm">λ<sub>max</sub> fármaco</span><span>Eficiencia de encapsulación y perfil de liberación</span></button>
+      <button class="sum" data-go="2" style="--c:#c084fc"><i>02</i><b>Antioxidantes</b><span class="nm">517 nm</span><span>DPPH e IC<sub>50</sub></span></button>
+      <button class="sum" data-go="3" style="--c:#fbbf24"><i>03</i><b>Cinética enzimática</b><span class="nm">340 nm</span><span>NADH, V<sub>máx</sub>, K<sub>m</sub> e inhibidores</span></button>
+      <button class="sum" data-go="4" style="--c:#fb7185"><i>04</i><b>Biosensores</b><span class="nm">≈ 520 nm</span><span>Desplazamiento SPR de nanopartículas</span></button>
+      <button class="sum" data-go="5" style="--c:#38bdf8"><i>05</i><b>Síntesis</b><span class="nm">400 → 300 nm</span><span>Monitoreo de reacciones en tiempo real</span></button>
+    </div>
+    <p class="thanks">¿Preguntas?</p>
+  </section>
+
+</main>
+
+<aside class="notes-panel" id="notesPanel" hidden></aside>
+
+<nav class="nav">
+  <button id="prev" aria-label="Diapositiva anterior">←</button>
+  <div class="dots" id="dots"></div>
+  <span class="count" id="count"></span>
+  <button id="notesBtn" title="Notas del expositor (N)">Notas</button>
+  <button id="fsBtn" title="Pantalla completa (F)">⛶</button>
+  <button id="next" aria-label="Diapositiva siguiente">→</button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
